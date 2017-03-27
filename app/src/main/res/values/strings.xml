@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name"             translatable="true">Movies</string>
+
+    <string name="serverdown_error_msg" translatable="true">Sorry, Unable to connect to the MovieDb server</string>
+    <string name="cursor_error_msg"     translatable="true">Sorry, No movies found</string>
+    <string name="network_error_msg"    translatable="true">No internet connection: Offline mode</string>
+    <string name="details_error_msg"    translatable="true">An error is occurred when trying to get movie details</string>
+
+    <string name="popular_menu_item"    translatable="true">Most Popular</string>
+    <string name="rated_menu_item"      translatable="true">Top Rated</string>
+    <string name="favorite_menu_item"   translatable="true">My Favorites</string>
+    <string name="share_menu_item"      translatable="true">Share trailer</string>
+
+    <string name="original_title"       translatable="true">original title</string>
+    <string name="runtime"              translatable="true">runtime</string>
+    <string name="minutes"              translatable="true">min.</string>
+    <string name="trailers"             translatable="true">Trailers:</string>
+    <string name="reviews"              translatable="true">Reviews:</string>
+
+    <string name="movie_details"        translatable="true">Movie\'s Details</string>
+
+    <string name="release_date"         translatable="true">release date</string>
+    <string name="vote_average"         translatable="true">vote average</string>
+    <string name="overview"             translatable="true">Overview</string>
+    <string name="language_code"        translatable="true">en-gb</string>
+    <string name="date_format"          translatable="false">d MMMM yyyy</string>
+
+    <string name="picasso_url"          translatable="false">http://image.tmdb.org/t/p/</string>
+    <string name="poster_width"         translatable="false">w342</string>
+
+    <string name="add_preferred"        translatable="true">Add to favorites</string>
+    <string name="remove_preferred"     translatable="true">Remove from\nfavorites</string>
+
+    <string name="success_add_msg"      translatable="true">Successfully added</string>
+    <string name="success_rem_msg"      translatable="true">Successfully removed</string>
+
+    <string name="offline"             translatable="true">Offline Mode</string>
+
+</resources>

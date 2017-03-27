@@ -1,0 +1,87 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="movieLabelPortrait">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Caption</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+    </style>
+
+    <style name="movieInfoPortrait">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display1</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginStart">4dp</item>
+    </style>
+
+    <style name="movieLabelListPortrait">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display2</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginTop">1dp</item>
+    </style>
+
+    <style name="movieRecyclerViewPortrait">
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+    </style>
+
+    <style name="movieImageTitleListPortrait">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+    </style>
+
+    <style name="movieLabelLandscape" parent="movieLabelPortrait">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="movieInfoLandscape" parent="movieInfoPortrait">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="movieLabelListLandscape" parent="movieLabelListPortrait">
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+        <item name="android:layout_marginRight">4dp</item>
+    </style>
+
+    <style name="movieLabelLandscape600dp" parent="movieLabelLandscape">
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="movieInfoLandscape600dp" parent="movieInfoLandscape">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="movieLabelListLandscape600dp" parent="movieLabelListLandscape">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+</resources>

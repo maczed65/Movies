@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" >
+    <data>
+        <variable name="movie" type="com.example.mzonno.movies.MovieInfo"/>
+    </data>
+
+<ScrollView
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_original_title"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="@color/backgroundTitle"
+            android:textColor="@color/foregroundTitle"
+            android:textSize="@dimen/movieTitleSize"
+            android:text="@{movie.title}"
+            android:gravity="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <LinearLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_original_title" >
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:id="@+id/iv_thumbnail"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:layout_weight="1"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="4dp"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tv_release_date_label"
+                        android:text="@string/release_date"
+                        style="@style/movieLabelPortrait"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_thumbnail"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_original_title" />
+
+                    <TextView
+                        android:id="@+id/tv_release_date"
+                        android:text="@{movie.release_date}"
+                        style="@style/movieInfoPortrait"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_thumbnail"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_release_date_label"  />
+
+                    <TextView
+                        android:id="@+id/tv_runtime_label"
+                        android:text="@string/runtime"
+                        style="@style/movieLabelPortrait"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_thumbnail"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_release_date" />
+
+                    <TextView
+                        android:id="@+id/tv_runtime"
+                        android:text="@{movie.runtime}"
+                        style="@style/movieInfoPortrait"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_thumbnail"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_runtime_label" />
+
+                    <TextView
+                        android:id="@+id/tv_vote_average_label"
+                        android:text="@string/vote_average"
+                        style="@style/movieLabelPortrait"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_thumbnail"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_runtime" />
+
+                    <TextView
+                        android:id="@+id/tv_vote_average"
+                        android:text="@{movie.vote_average}"
+                        style="@style/movieInfoPortrait"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_thumbnail"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_vote_average_label" />
+
+                    <ToggleButton
+                        android:id="@+id/btn_favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="8dp"
+
+                        android:button="@drawable/toggle_check_icon"
+                        android:checked="false"
+                        android:drawablePadding="10dp"
+                        android:padding="10dp"
+                        android:textColor="@color/togglebtnText"
+                        android:textOff="@string/add_preferred"
+                        android:textOn="@string/remove_preferred"
+                        android:textSize="@dimen/togglebtnTextSize"
+                        app:layout_constraintBottom_toBottomOf="@+id/iv_thumbnail"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintLeft_toRightOf="@+id/iv_thumbnail"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_vote_average"
+                        app:layout_constraintVertical_bias="1.0" />
+                </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_overview_label"
+            android:text="@string/overview"
+            style="@style/movieLabelPortrait"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_layout"
+            android:layout_marginTop="0dp" />
+
+        <TextView
+            android:id="@+id/tv_overview"
+            android:text="@{movie.overview}"
+            style="@style/movieInfoPortrait"
+            android:paddingBottom="8dp"
+            android:textAlignment="gravity"
+            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overview_label" />
+
+
+        <ImageView
+            android:id="@+id/tableImage"
+            style="@style/movieImageTitleListPortrait"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overview"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_trailer_label"/>
+
+        <TextView
+            android:id="@+id/tv_trailer_label"
+            android:text="@string/trailers"
+            style="@style/movieLabelListPortrait"
+            app:layout_constraintTop_toTopOf="@+id/tableImage"
+            app:layout_constraintRight_toRightOf="@+id/tableImage"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overview" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_trailers"
+            style="@style/movieRecyclerViewPortrait"
+            app:layout_constraintTop_toBottomOf="@+id/tv_trailer_label"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_editor_absoluteY="460dp" />
+
+        <ImageView
+            android:id="@+id/tableImage2"
+            style="@style/movieImageTitleListPortrait"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rcv_trailers"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_reviews_label"/>
+
+        <TextView
+            android:id="@+id/tv_reviews_label"
+            android:text="@string/reviews"
+            style="@style/movieLabelListPortrait"
+            app:layout_constraintTop_toTopOf="@+id/tableImage2"
+            app:layout_constraintRight_toRightOf="@+id/tableImage2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rcv_trailers"  />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_reviews"
+            style="@style/movieRecyclerViewPortrait"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reviews_label"
+            tools:layout_editor_absoluteY="630dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+
+</layout>

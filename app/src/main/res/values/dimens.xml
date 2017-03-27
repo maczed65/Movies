@@ -1,0 +1,12 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="errorTextSize">20sp</dimen>
+    <dimen name="movieTitleSize">30sp</dimen>
+    <dimen name="togglebtnTextSize">11sp</dimen>
+    <dimen name="reviewTextSize">14sp</dimen>
+    <dimen name="reviewAuthorTextSize">14sp</dimen>
+    <dimen name="trailerTextSize">14sp</dimen>
+</resources>
